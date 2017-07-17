@@ -1,0 +1,13 @@
+[alias]
+    st = status
+    co = checkout
+    br = branch
+    ci = commit
+    unstage = reset HEAD --
+    gl = log --oneline --decorate
+    ll = log --oneline --decorate
+    l = --no-pager log --oneline -n 5 --no-merges --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    quick-stats = ! /usr/local/bin/git-quick-stats
+    s = status -s
+
