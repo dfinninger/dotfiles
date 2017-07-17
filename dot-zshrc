@@ -1,0 +1,67 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+export ZSH=/Users/dfinninger/.oh-my-zsh
+export DISABLE_AUTO_TITLE="true" 
+echo -ne "\e]1; \a"
+
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="avit"
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git brew docker mvn osx knife k)
+
+source $ZSH/oh-my-zsh.sh
+
+# + User configuration + #
+# ====================== #
+CODE_PATH=~/repos
+
+# == Shell fun ==
+PS1='$(tput setaf 13)$(echo "${VIRTUAL_ENV##*/}")$(tput sgr0)'$PS1
+alias ls="ls -GF"
+export LSCOLORS="Exfxcxdxbxegedabagacad"
+
+# == Path Mainpulation ==
+export PATH=$PATH:${CODE_PATH}/go/bin
+export PATH=$PATH:~/bin
+export PATH=$PATH:~/scripts
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+export PATH="$HOME/.jenv/bin:$PATH"
+
+# == Homebrew Overrides ==
+if [ -f "/usr/local/bin/gtar" ]; then
+    alias tar="/usr/local/bin/gtar"
+fi
+
+# == Python Configs ==
+if [ -f "/usr/local/bin/virtualenvwrapper.sh" ]; then
+    export VIRTUAL_ENV_DISABLE_PROMPT=true
+    source /usr/local/bin/virtualenvwrapper.sh
+fi
+
+# == Golang Configs ==
+export GOPATH=${CODE_PATH}/go
+
+# == Java Configs ==
+if [ -x "$(command -v jenv &> /dev/null)" ]; then
+    eval "$(jenv init -)"
+fi
+
+# == Git configurations ==
+alias g='git'
+alias gs='git status'
+
+# == Kubernetes Configs ==
+if [ -x "$(command -v kubectl &> /dev/null)" ]; then
+    source <(kubectl completion zsh)
+fi
+
+# == Private ==
+source .zshrc.priv
