@@ -168,6 +168,7 @@
 (use-package vterm
   :ensure t
   :config
+  (setq vterm-shell "/usr/local/bin/zsh")
   (use-package vterm-toggle
     :ensure t))
 
