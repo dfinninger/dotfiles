@@ -97,6 +97,7 @@
     (global-evil-leader-mode t)
     (evil-leader/set-leader "<SPC>")
     (evil-leader/set-key  ; leader-key definitions
+      "/" 'projectile-ripgrep
       "TAB" 'evil-switch-to-windows-last-buffer
       "b b" 'ivy-switch-buffer
       "b d" 'kill-buffer
