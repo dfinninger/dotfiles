@@ -35,11 +35,8 @@
 ;; Autosave
 (auto-save-visited-mode t)
 
-;; Show line numbers, handling graphic and terminal modes
-(add-hook 'prog-mode-hook
-          (if (and (fboundp 'display-line-numbers-mode) (display-graphic-p))
-              #'display-line-numbers-mode
-            #'linum-mode))
+;; Show line numbers
+(global-display-line-numbers-mode t)
 
 ;; Lockfiles remove lockfiles
 (setq create-lockfiles nil)
