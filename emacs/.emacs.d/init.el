@@ -32,6 +32,9 @@
 ;; Refresh from disk
 (global-auto-revert-mode t)
 
+;; Autosave
+(auto-save-visited-mode t)
+
 ;; Show line numbers, handling graphic and terminal modes
 (add-hook 'prog-mode-hook
           (if (and (fboundp 'display-line-numbers-mode) (display-graphic-p))
