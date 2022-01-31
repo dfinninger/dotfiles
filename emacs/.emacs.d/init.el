@@ -90,7 +90,7 @@
   (use-package evil-escape
     :ensure t
     :config (evil-escape-mode 1))
-
+emrfs-hadoop-assembly-2.46.0-SNAPSHOT.jar
   (use-package evil-leader
     :ensure t
     :config
@@ -109,6 +109,7 @@
       "p" 'projectile-command-map
       "s s" 'swiper
       "t t" 'vterm-toggle-cd
+      "t w" 'toggle-truncate-lines
       "d x w" 'delete-trailing-whitespace))
 
   (use-package evil-surround
