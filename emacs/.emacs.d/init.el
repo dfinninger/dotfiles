@@ -82,6 +82,8 @@
 ;; Evil Settings
 (use-package evil
   :ensure t
+  :init
+  (setq evil-want-keybinding nil)
   :config
   (evil-mode 1)
 
@@ -100,6 +102,9 @@
       "b d" 'kill-buffer
       "f f" 'find-file
       "f s" 'save-buffer
+      "g g" 'magit-status
+      "g d" 'magit-dispatch
+      "g f" 'magit-file-dispatch
       "p" 'projectile-command-map
       "s s" 'swiper
       "t t" 'vterm-toggle-cd
@@ -115,6 +120,12 @@
     (evil-org-set-key-theme
      '(textobjects insert navigation additional shift todo heading))
     (add-hook 'org-mode-hook (lambda () (evil-org-mode)))))
+
+(use-package evil-collection
+  :after evil
+  :ensure t
+  :config
+  (evil-collection-init))
 
 ;; Projectile
 (use-package projectile
@@ -137,6 +148,11 @@
 ;; Magit
 (use-package magit
   :ensure t)
+
+(use-package git-gutter
+  :ensure t
+  :config
+  (global-git-gutter-mode +1))
 
 ;; Comany Mode
 (use-package company
