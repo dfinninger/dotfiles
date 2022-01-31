@@ -187,6 +187,12 @@
   :config
   (spaceline-emacs-theme))
 
+;; YAML
+(use-package yaml-mode
+  :ensure t
+  :init
+  (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+
 ;;; LSP Mode =================================================
 (use-package lsp-mode
   :ensure t
