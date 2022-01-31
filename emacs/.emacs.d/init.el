@@ -68,7 +68,7 @@
 (package-refresh-contents)
 
 (unless (package-installed-p 'use-package)
-  (package-install'use-packageg))
+  (package-install 'use-package))
 
 
 ;;; Configuration ========================================
