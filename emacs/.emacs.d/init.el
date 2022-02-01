@@ -184,7 +184,8 @@
 (use-package spaceline-config
   :ensure spaceline
   :config
-  (spaceline-emacs-theme))
+  (spaceline-emacs-theme)
+  (setq spaceline-minor-modes-p nil))
 
 ;; YAML
 (use-package yaml-mode
