@@ -90,7 +90,6 @@
   (use-package evil-escape
     :ensure t
     :config (evil-escape-mode 1))
-emrfs-hadoop-assembly-2.46.0-SNAPSHOT.jar
   (use-package evil-leader
     :ensure t
     :config
@@ -191,7 +190,7 @@ emrfs-hadoop-assembly-2.46.0-SNAPSHOT.jar
 (use-package yaml-mode
   :ensure t
   :init
-  (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+  (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode)))
 
 ;;; LSP Mode =================================================
 (use-package lsp-mode
