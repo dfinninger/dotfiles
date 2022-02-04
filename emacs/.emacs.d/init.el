@@ -55,9 +55,11 @@
   (write-region "" nil custom-file))
 (load custom-file nil t) ; Load custom file. Don't hide errors. Hide success message
 
-
 ;; Disable lockfiles
 (setq create-lockfiles nil)
+
+;; TRAMP
+(setq tramp-default-method "ssh")
 
 ;;; Packages ============================================
 ;; MELPA Stuff
