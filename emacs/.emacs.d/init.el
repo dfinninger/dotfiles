@@ -102,6 +102,8 @@
       "TAB" 'evil-switch-to-windows-last-buffer
       "b b" 'ivy-switch-buffer
       "b d" 'kill-buffer
+      "c /" 'comment-or-uncomment-region
+      "c w x" 'delete-trailing-whitespace
       "f f" 'find-file
       "f s" 'save-buffer
       "g g" 'magit-status
@@ -111,7 +113,17 @@
       "s s" 'swiper
       "t t" 'vterm-toggle-cd
       "t w" 'toggle-truncate-lines
-      "d x w" 'delete-trailing-whitespace))
+      "w c" 'evil-window-delete
+      "w -" 'evil-window-split
+      "w |" 'evil-window-vsplit
+      "w h" 'evil-window-left
+      "w j" 'evil-window-down
+      "w k" 'evil-window-up
+      "w l" 'evil-window-right
+      "w H" 'evil-window-move-far-left
+      "w J" 'evil-window-move-far-down
+      "w K" 'evil-window-move-far-up
+      "w L" 'evil-window-move-far-right))
 
   (use-package evil-surround
     :ensure t
