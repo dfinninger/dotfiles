@@ -102,6 +102,7 @@
       "TAB" 'evil-switch-to-windows-last-buffer
       "b b" 'ivy-switch-buffer
       "b d" 'kill-buffer
+      "b x" 'kill-buffer-and-window
       "c /" 'comment-or-uncomment-region
       "c w x" 'delete-trailing-whitespace
       "f f" 'find-file
@@ -113,7 +114,8 @@
       "s s" 'swiper
       "t t" 'vterm-toggle-cd
       "t w" 'toggle-truncate-lines
-      "w c" 'evil-window-delete
+      "w d" 'evil-window-delete
+      "w x" 'evil-window-delete
       "w -" 'evil-window-split
       "w |" 'evil-window-vsplit
       "w h" 'evil-window-left
