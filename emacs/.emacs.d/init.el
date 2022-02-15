@@ -123,8 +123,8 @@
       "w k" 'evil-window-up
       "w l" 'evil-window-right
       "w H" 'evil-window-move-far-left
-      "w J" 'evil-window-move-far-down
-      "w K" 'evil-window-move-far-up
+      "w J" 'evil-window-move-very-bottom
+      "w K" 'evil-window-move-very-top
       "w L" 'evil-window-move-far-right))
 
   (use-package evil-surround
